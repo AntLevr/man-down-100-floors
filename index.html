@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>是男人就下100层</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>是男人就下100层</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">当前层数:</span>
+                    <span id="currentLevel">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">最高层数:</span>
+                    <span id="highestLevel">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">生命值:</span>
+                    <span id="health">100</span>
+                </div>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="game-controls">
+            <div class="instructions">
+                <p>使用 ← → 键或 A D 键移动</p>
+                <p>使用空格键跳跃</p>
+                <p>避开红色平台，跳到绿色平台可以恢复生命值</p>
+            </div>
+            <button id="startBtn" class="btn">开始游戏</button>
+            <button id="restartBtn" class="btn" style="display: none;">重新开始</button>
+        </div>
+        <div id="gameOver" class="game-over" style="display: none;">
+            <h2>游戏结束！</h2>
+            <p>你到达了第 <span id="finalLevel">0</span> 层</p>
+            <button id="restartGameBtn" class="btn">再来一次</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
